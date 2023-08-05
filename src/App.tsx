@@ -1,3 +1,12 @@
+import { AddNewItem } from "./AddNewItem";
+import { Column } from "./Column";
+import { AppContainer } from "./styles"
+
 export const App = () => {
-  return <h1>Hello World!</h1>
-}
+  return (
+    <AppContainer>
+      <Column text="Todo:" />
+      <AddNewItem toggleButtonText="+ Add another List" onAdd={() => console.log("Item created")} />
+    </AppContainer>
+  );
+};
